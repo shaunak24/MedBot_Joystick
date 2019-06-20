@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/toolbar_layout"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/connect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_server"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:fab_colorNormal="@color/colorPrimary" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/reverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reverse"
+        android:layout_alignParentBottom="true"
+        app:fab_colorNormal="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/coord_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/coord_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/joystick_layout"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/joystick_layout"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <io.github.controlwear.virtual.joystick.android.JoystickView
+            android:id="@+id/joystick_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:JV_borderColor="@android:color/black"
+            app:JV_buttonColor="@android:color/black" />
+
+        <io.github.controlwear.virtual.joystick.android.JoystickView
+            android:id="@+id/joystick_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:JV_borderColor="@android:color/black"
+            app:JV_buttonColor="@android:color/black" />
+
+    </LinearLayout>
+
+</RelativeLayout>
